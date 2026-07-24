@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RSVP for Weston and Karli's wedding.">
+  <meta name="theme-color" content="#fbf7f1">
+  <title>RSVP | Weston &amp; Karli</title>
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="rsvp-page">
+  <a class="skip-link" href="#rsvp-main">Skip to RSVP form</a>
+
+  <header class="site-header rsvp-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="Return to wedding website">
+        <span>W</span><span class="wordmark-flourish">&amp;</span><span>K</span>
+      </a>
+      <a class="back-link" href="index.html">← Back to website</a>
+    </div>
+  </header>
+
+  <main id="rsvp-main">
+    <section class="rsvp-hero section-shell narrow">
+      <img class="hero-bouquet rsvp-bouquet" src="assets/images/bouquet-watercolor.svg" alt="Watercolor bouquet">
+      <p class="eyebrow">Kindly Reply</p>
+      <h1>RSVP</h1>
+      <p>
+        Please respond by <strong data-rsvp-deadline-display>Month Day, Year</strong>.
+        One response may be submitted for each household.
+      </p>
+    </section>
+
+    <section class="rsvp-shell section-shell">
+      <form class="rsvp-form" id="rsvp-form" novalidate>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+        <fieldset>
+          <legend>Invitation</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Invitation code <b aria-hidden="true">*</b></span>
+              <input
+                type="text"
+                name="invitationCode"
+                id="invitation-code"
+                autocomplete="off"
+                maxlength="40"
+                required
+                placeholder="Found on your invitation"
+              >
+              <small>Codes are not case-sensitive.</small>
+            </label>
+
+            <label class="field">
+              <span>Primary guest name <b aria-hidden="true">*</b></span>
+              <input
+                type="text"
+                name="primaryGuest"
+                autocomplete="name"
+                maxlength="100"
+                required
+                placeholder="First and last name"
+              >
+            </label>
+
+            <label class="field field-full">
+              <span>Email address <b aria-hidden="true">*</b></span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                maxlength="160"
+                required
+                placeholder="name@example.com"
+              >
+              <small>Used only for wedding communication and confirmation.</small>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Will you attend?</legend>
+          <div class="attendance-options">
+            <label class="choice-card">
+              <input type="radio" name="attending" value="Yes" required>
+              <span>
+                <strong>Joyfully accepts</strong>
+                <small>We will be there</small>
+              </span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="attending" value="No" required>
+              <span>
+                <strong>Regretfully declines</strong>
+                <small>We will celebrate from afar</small>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="attending-details">
+          <legend>Guest details</legend>
+          <div class="form-grid">
+            <label class="field">
+              <span>Number attending <b aria-hidden="true">*</b></span>
+              <select name="guestCount" id="guest-count">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+              </select>
+              <small>The invitation code will enforce your household limit.</small>
+            </label>
+
+            <label class="field">
+              <span>Meal preference</span>
+              <select name="mealChoice">
+                <option value="">Select an option</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Beef">Beef</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Not decided">Not decided</option>
+              </select>
+            </label>
+
+            <label class="field field-full">
+              <span>Names of additional guests</span>
+              <textarea
+                name="additionalGuests"
+                rows="3"
+                maxlength="500"
+                placeholder="List each additional guest's full name"
+              ></textarea>
+            </label>
+
+            <label class="field field-full">
+              <span>Dietary restrictions or allergies</span>
+              <textarea
+                name="dietaryRestrictions"
+                rows="3"
+                maxlength="500"
+                placeholder="Please include the guest's name and restriction"
+              ></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>A little something extra</legend>
+          <div class="form-grid">
+            <label class="field field-full">
+              <span>Song request</span>
+              <input
+                type="text"
+                name="songRequest"
+                maxlength="160"
+                placeholder="What song will get you on the dance floor?"
+              >
+            </label>
+
+            <label class="field field-full">
+              <span>Message for the couple</span>
+              <textarea
+                name="notes"
+                rows="4"
+                maxlength="1000"
+                placeholder="Optional note"
+              ></textarea>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="honeypot" aria-hidden="true">
+          Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
+
+        <div class="form-actions">
+          <button class="button button-primary submit-button" type="submit">
+            <span class="submit-label">Submit RSVP</span>
+            <span class="submit-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="privacy-note">Your response is sent to a private Google Sheet controlled by the couple.</p>
+        </div>
+      </form>
+
+      <section class="success-card" id="success-card" hidden tabindex="-1">
+        <img src="assets/images/bouquet-watercolor.svg" alt="" aria-hidden="true">
+        <p class="eyebrow">Thank You</p>
+        <h2>Your response has been received</h2>
+        <p id="success-message">We are so grateful you took the time to reply.</p>
+        <a class="button button-secondary" href="index.html">Return to the website</a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <p class="footer-names"><span data-couple-first>Weston</span> &amp; <span data-couple-second>Karli</span></p>
+  </footer>
+
+  <script src="js/wedding-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/rsvp.js"></script>
+</body>
+</html>
