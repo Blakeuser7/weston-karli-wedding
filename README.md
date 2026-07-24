@@ -1,6 +1,6 @@
 # Weston & Karli Wedding Website
 
-A responsive wedding website designed for free GitHub Pages hosting, with a private Google Sheets RSVP system powered by Google Apps Script.
+A responsive wedding website designed for free GitHub Pages hosting, with a private Google Sheets RSVP system powered by Google Apps Script...
 
 ## What is included
 
