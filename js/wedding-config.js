@@ -33,7 +33,7 @@ window.WEDDING_CONFIG = {
       It usually begins with:
       https://script.google.com/macros/s/...
     */
-    endpoint: "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
+    endpoint: "https://script.google.com/macros/s/AKfycbwLrDRvC565U-CAyupoh_x0TfbxRk_Aqmnbz3V_x37eDO56k-X_YkOi3VWQY_FEZCkw/exec"
   },
 
   travel: {
