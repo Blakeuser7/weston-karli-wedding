@@ -11,10 +11,18 @@
   };
 
   const setLink = (selector, href) => {
+    const isConfigured =
+      typeof href === "string" &&
+      href.trim() !== "" &&
+      href !== "#" &&
+      !href.includes("PASTE_");
+
     document.querySelectorAll(selector).forEach((element) => {
-      if (href && href !== "#") {
+      if (isConfigured) {
         element.href = href;
+        element.removeAttribute("aria-disabled");
       } else {
+        element.href = "#";
         element.setAttribute("aria-disabled", "true");
         element.addEventListener("click", (event) => event.preventDefault());
       }
@@ -39,6 +47,7 @@
     setText("[data-venue-name]", wedding.venueName);
     setText("[data-venue-location]", wedding.venueLocation);
     setText("[data-rsvp-deadline-display]", rsvp.deadlineDisplay);
+    setLink("[data-rsvp-link]", rsvp.formUrl);
 
     setText("[data-hotel-name]", travel.hotelName);
     setText("[data-parking-info]", travel.parkingInfo);

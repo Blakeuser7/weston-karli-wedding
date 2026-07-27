@@ -24,16 +24,15 @@ window.WEDDING_CONFIG = {
     mapUrl: "https://maps.google.com/"
   },
 
-  rsvp: {
+    rsvp: {
     deadline: "2027-04-01",
     deadlineDisplay: "April 1, 2027",
 
     /*
-      Paste your deployed Google Apps Script Web App URL below.
-      It usually begins with:
-      https://script.google.com/macros/s/...
+      Paste the public Google Form link below.
+      In Google Forms, use Send > Link and copy the shareable URL.
     */
-    endpoint: "https://script.google.com/macros/s/AKfycbwLrDRvC565U-CAyupoh_x0TfbxRk_Aqmnbz3V_x37eDO56k-X_YkOi3VWQY_FEZCkw/exec"
+    formUrl: "PASTE_GOOGLE_FORM_LINK_HERE"
   },
 
   travel: {
