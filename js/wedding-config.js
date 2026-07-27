@@ -13,26 +13,26 @@ window.WEDDING_CONFIG = {
   },
 
   wedding: {
-    dateTime: "2027-05-15T16:00:00",
-    dateDisplay: "May 15, 2027",
-    city: "City, Florida",
+    dateTime: "2027-07-17T16:00:00",
+    dateDisplay: "July 17, 2027",
+    city: "Tallahassee, Florida",
     ceremonyTime: "4:00 PM",
     cocktailTime: "5:00 PM",
     receptionTime: "6:00 PM",
-    venueName: "Venue Name",
+    venueName: "Governors Club",
     venueLocation: "Venue Address or City, State",
     mapUrl: "https://maps.google.com/"
   },
 
     rsvp: {
-    deadline: "2027-04-01",
-    deadlineDisplay: "April 1, 2027",
+    deadline: "2027-05-01",
+    deadlineDisplay: "May 1, 2027",
 
     /*
       Paste the public Google Form link below.
       In Google Forms, use Send > Link and copy the shareable URL.
     */
-    formUrl: "PASTE_GOOGLE_FORM_LINK_HERE"
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLScd2oxwTCozomF6NK8oTWEofZccig79v0ShxsJq-MxAgOzE-A/viewform?usp=header"
   },
 
   travel: {
