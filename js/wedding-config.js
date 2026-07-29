@@ -57,5 +57,5 @@ window.WEDDING_CONFIG = {
     Change setupMode to false before sharing the site with guests.
     This hides the small image-replacement labels.
   */
-  setupMode: true
+  setupMode: false
 };
